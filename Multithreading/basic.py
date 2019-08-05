@@ -15,4 +15,10 @@ class B(Thread):
 a1 = A()
 b1 = B()
 a1.start()
+sleep(0.2) # this will run semutenously bith process
 b1.start()
+
+a1.join()
+b1.join()
+
+print("Progress End !")

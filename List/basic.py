@@ -11,7 +11,7 @@ def find(list,n):
 
 
 list = [5,2,8,4,9,8]
-n=5
+n=9
 
 if find(list,n):
     print("Found here",pos+1)
