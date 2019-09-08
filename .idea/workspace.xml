@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d379160b-29b2-4bee-8f6c-439749f8946f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DataScience/.idea/DataScience.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataScience/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataScience/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataScience/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataScience/Concatanation/Concat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataScience/DataFrame.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataScience/Join Operation/Join.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataScience/Merge Operation/Merge.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NumPy/Intro.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PYTHON.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PYTHON.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataScience/Series Object/WiSO.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataScience/Series Object/WiSO.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Inheritance/Basic.py" beforeDir="false" afterPath="$PROJECT_DIR$/Inheritance/Basic.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,10 +13,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/NumPy/Intro.py">
+        <entry file="file://$PROJECT_DIR$/Inheritance/Basic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+            <state relative-caret-position="176">
+              <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -80,6 +68,7 @@
         <option value="$PROJECT_DIR$/Lambda/demo.py" />
         <option value="$PROJECT_DIR$/DataScience/Series Object/WiSO.py" />
         <option value="$PROJECT_DIR$/NumPy/Intro.py" />
+        <option value="$PROJECT_DIR$/Inheritance/Basic.py" />
       </list>
     </option>
   </component>
@@ -94,7 +83,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -102,10 +90,16 @@
               <item name="PYTHON" type="b2602c69:ProjectViewProjectNode" />
               <item name="PYTHON" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="PYTHON" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PYTHON" type="462c0819:PsiDirectoryNode" />
+              <item name="Inheritance" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -131,8 +125,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Intro">
-    <configuration name="Demo (3)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Basic">
+    <configuration name="Basic" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PYTHON" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -140,11 +134,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Sets" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Inheritance" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sets/Demo.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Inheritance/Basic.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -260,11 +254,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Basic" />
         <item itemvalue="Python.Intro" />
         <item itemvalue="Python.WiSO" />
         <item itemvalue="Python.demo (1)" />
         <item itemvalue="Python.demo" />
-        <item itemvalue="Python.Demo (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -283,6 +277,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49918166" visible="true" weight="0.11532738" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -297,7 +292,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.36006546" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.3289689" />
-      <window_info anchor="bottom" x="11" y="212" width="1344" height="304" id="Run" order="10" weight="0.36006546" />
+      <window_info active="true" anchor="bottom" x="11" y="212" width="1344" height="304" id="Run" order="10" visible="true" weight="0.36006546" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -545,6 +540,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Inheritance/Basic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
         </state>
       </provider>
     </entry>

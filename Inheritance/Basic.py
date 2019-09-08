@@ -6,23 +6,23 @@ class Shubham:
         print("Shubham is work at google")
 
     def info(self):
-        print("The shubham is never want to do govt. job whenever its't necessary")
+        print("Private")
 
-class Renuka(Shubham): # Multi level inheritence
+class Dharam(Shubham): # Multi level inheritence
     def work(self):
         print("The renuka wnat a govt. job\n")
 
     def husband(self):
-        print("Renuka want Husband who already have govt. job")
+        print("Married")
 
     def info(self):
-        print("Renuka is the sensetive girl . she always cry")
+        print("Fail")
 
-class Married(Renuka):
+class Married(Dharam):
     def Relation(self):
-        print("Both Shubham and Renuka will be married")
+        print("Passed")
 
-R = Renuka()
+R = Dharam()
 S = Shubham()
 M = Married()
 print(M.workplace())
