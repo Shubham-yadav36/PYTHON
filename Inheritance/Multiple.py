@@ -6,21 +6,21 @@ class Shubham:
         print("Shubham is work at google")
 
     def info(self):
-        print("The shubham is never want to do govt. job whenever its't necessary")
+        print("The anyone is never want to do govt. job whenever its't necessary")
 
 class Renuka: # Multiple inheritence
     def work(self):
-        print("The renuka wnat a govt. job\n")
+        print("The anyone wnat a govt. job\n")
 
     def husband(self):
-        print("Renuka want Husband who already have govt. job")
+        print("anyone want Husband who already have govt. job")
 
     def info(self):
-        print("Renuka is the sensetive girl . she always cry")
+        print("anyone is the sensetive girl . she always cry")
 
-class Married(Renuka,Shubham):
+class Married(hus,wife):
     def Relation(self):
-        print("Both Shubham and Renuka will be married")
+        print("Both anyone and anyone will be married")
 
 R = Renuka()
 S = Shubham()
