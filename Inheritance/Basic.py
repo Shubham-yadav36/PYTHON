@@ -7,10 +7,11 @@ class Shubham:
 
     def info(self):
         print("Private")
-
+    
+-
 class Dharam(Shubham): # Multi level inheritence
     def work(self):
-        print("The renuka wnat a govt. job\n")
+        print("The  wnat a govt. job\n")
 
     def husband(self):
         print("Married")
