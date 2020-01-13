@@ -1,5 +1,5 @@
 f=open("Shubham.txt",'r')
-f1= open("renuka",'a')
+f1= open("Shubh",'a')
 # print(f.readable())
 # print(f.read())
 

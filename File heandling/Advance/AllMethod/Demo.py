@@ -1,0 +1,5 @@
+file =open("Raja")
+print(file.read())
+lines = file.readlines()
+print(lines)
+file.close()
