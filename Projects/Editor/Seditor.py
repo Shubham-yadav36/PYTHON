@@ -1,23 +1,24 @@
 import tkinter as tk
-from tkinter as ttk
-from tkinter import font,colorchosse,filegialog,messagebox
-import os
+from tkinter import ttk
 
-main_application = tk.Tk()
-main_application.geometry("1200*800")
-main_application.title("Seditor")
+root = tk.Tk()
+root.title("Seditor")
 
-############################### main menu ##################################
-#------------------------------ end main -----------------------------------
+# create label
+name_lavel = ttk.Label(root, text="Enter Your Name : ").grid(row=0, column=0, sticky=tk.W)
+age_level = ttk.Label(root,text="Enter Your Age : ").grid(row=1, column=0, sticky=tk.W)
+email_level = ttk.Label(root,text="Enter Your Email: ").grid(row=2, column=0, sticky=tk.W)
 
-############################### main tool ##################################
-#------------------------------ end main -----------------------------------
+#create entrybox
+name_var = tk.StringVar()
+name_entrybox = ttk.Entry(root, width=30, textvariable = name_var).grid(row=0,column=1)
 
-############################### main editor ##################################
-#------------------------------ end main -----------------------------------
+age_var = tk.StringVar()
+age_entrybox = ttk.Entry(root, width=30, textvariable = age_var).grid(row=1,column=1)
 
-############################### main status bar ##################################
-#------------------------------ end main -----------------------------------
+email_var = tk.StringVar()
+email_entrybox = ttk.Entry(root, width=30, textvariable = email_var).grid(row=2,column=1)
 
-############################### main functionality ##################################
-#------------------------------ end main -----------------------------------
+#button
+submit_button = tk.Button(root, text="Submit").grid( row=3, column=0)
+root.mainloop()
