@@ -26,15 +26,15 @@ def wishTime():
     else:
         speak('Good Evening!')
 
-    speak('Nandini plz tell me how may i help you : ')
+    speak('Shubham plz tell me how may i help you : ')
 
 
 def takecmd():
     r = sr.Recognizer()
+    print("Listning.....")
     with sr.Microphone() as source:
         r.pause_threshold=1
         audio = r.listen(source)
-        print("Listning.....")
     try:
         print("Recognising.....")
         query = r.recognize_google(audio, language='en-in')
