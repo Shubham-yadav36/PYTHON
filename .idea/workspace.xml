@@ -4,25 +4,10 @@
     <list default="true" id="d379160b-29b2-4bee-8f6c-439749f8946f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Inheritance/Multiple.py" beforeDir="false" afterPath="$PROJECT_DIR$/Inheritance/Multiple.py" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/venv/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DataBaseConnectivity/Demo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -34,47 +19,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/DataBaseConnectivity/Demo.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="10" />
-    <option name="y" value="20" />
-    <option name="width" value="1346" />
-    <option name="height" value="688" />
-  </component>
   <component name="ProjectId" id="1VBYPsO12j5xejh4EkHiXuPZECQ" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="PYTHON" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PYTHON" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PYTHON" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PYTHON" type="462c0819:PsiDirectoryNode" />
-              <item name="DataBaseConnectivity" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -94,19 +41,7 @@
       <recent name="E:\My program\PYTHON\Basic\String Method" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Python.Demo">
+  <component name="RunManager" selected="Python.Basic">
     <configuration name="Assistant" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PYTHON" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -276,14 +211,14 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.More" />
-      <item itemvalue="Python.overloading" />
-      <item itemvalue="Python.Shubh" />
       <item itemvalue="Python.Assistant" />
       <item itemvalue="Python.Basic" />
-      <item itemvalue="Python.changeAll" />
       <item itemvalue="Python.Demo" />
+      <item itemvalue="Python.More" />
       <item itemvalue="Python.Seditor" />
+      <item itemvalue="Python.Shubh" />
+      <item itemvalue="Python.changeAll" />
+      <item itemvalue="Python.overloading" />
     </list>
     <recent_temporary>
       <list>
@@ -295,18 +230,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -320,43 +244,12 @@
     </task>
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24962631" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32935154" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32935154" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -375,76 +268,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="175" y="0" key="#Updates" timestamp="1579333706156">
+    <state x="463" y="106" key="FileChooserDialogImpl" timestamp="1604753043413">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="175" y="0" key="#Updates/0.0.1366.728@0.0.1366.728" timestamp="1579333706156" />
-    <state x="137" y="12" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579581769896">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="137" y="12" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1579581769896" />
-    <state x="430" y="149" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579237331423">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="430" y="149" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1579237331423" />
-    <state x="413" y="62" key="FileChooserDialogImpl" timestamp="1579581954658">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="413" y="62" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1579581954657" />
-    <state width="1339" height="165" key="GridCell.Tab.0.bottom" timestamp="1579581972312">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1339" height="165" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579581972312" />
-    <state width="1339" height="165" key="GridCell.Tab.0.center" timestamp="1579581972312">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1339" height="165" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579581972312" />
-    <state width="1339" height="165" key="GridCell.Tab.0.left" timestamp="1579581972311">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1339" height="165" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579581972311" />
-    <state width="1339" height="165" key="GridCell.Tab.0.right" timestamp="1579581972312">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1339" height="165" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579581972312" />
-    <state width="1339" height="208" key="GridCell.Tab.1.bottom" timestamp="1579238322394">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1339" height="208" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579238322394" />
-    <state width="1339" height="208" key="GridCell.Tab.1.center" timestamp="1579238322394">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1339" height="208" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1579238322394" />
-    <state width="1339" height="208" key="GridCell.Tab.1.left" timestamp="1579238322394">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1339" height="208" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1579238322394" />
-    <state width="1339" height="208" key="GridCell.Tab.1.right" timestamp="1579238322394">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1339" height="208" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1579238322394" />
-    <state x="75" y="0" key="SettingsEditor" timestamp="1579581963743">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="75" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1579581963743" />
-    <state x="350" y="148" key="com.intellij.ide.util.TipDialog" timestamp="1579581841780">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="350" y="148" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1579581841780" />
-    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1579238381959">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1579238381959" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DataBaseConnectivity/Demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
+    <state x="463" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1604753043413" />
   </component>
 </project>
