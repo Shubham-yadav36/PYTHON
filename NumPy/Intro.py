@@ -16,3 +16,6 @@ print(e)
 
 f= np.random.random((3,4))
 print(f)
+
+f.shape = (1,1)
+print(f)
