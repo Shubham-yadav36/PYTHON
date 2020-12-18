@@ -9,7 +9,7 @@ class Model:
         self.conn = None
         self.cur = None
         try:
-            self.conn = connect("musicapp/Shubham36@localhost")
+            self.conn = connect("musicapp/Shubham36@localhost:1522/orcl")
             self.cur = self.conn.cursor()
             print("Connected Successfully.")
         except DatabaseError:
@@ -58,7 +58,7 @@ class Model:
         self.conn.commit()
         return "Song Successfully Added to Your Favourites."
 
-    def load_song_from_favourites(self):
+    def load_songs_from_favourites(self):
         self.cur.execute("SELECT SONG_NAME,SONG_PATH FROM MYFAVOURITES")
         is_song = True
         for song_name, song_path in self.cur:
@@ -69,5 +69,15 @@ class Model:
             return "List Populated From Favourites."
         else:
             return "No Song Present in Favourites."
+
+    def remove_song_from_favourites(self, song_name):
+        self.cur.execute("delete from MYFAVOURITES where song_name=:1", (song_name,))
+        count = self.cur.rowcount
+        if count == 0:
+            return "Song Not Present In Your Favourites."
+        else:
+            self.song_dict.pop(song_name)
+            self.conn.commit()
+            return "Song Successfully Removed From Favourites."
 
 
