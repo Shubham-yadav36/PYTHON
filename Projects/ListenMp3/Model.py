@@ -19,6 +19,9 @@ class Model:
     def get_db_status(self):
         return self.db_status
 
+    def get_song_count(self):
+        return len(self.song_dict)
+
     def close_db_connection(self):
         if self.cur is not None:
             self.cur.close()
@@ -43,27 +46,28 @@ class Model:
         song_tuple = self.cur.fetchone()
         if song_tuple is None:
             return False
-        return True
+        else:
+            return True
 
     def add_song_in_favourites(self, song_name, song_path):
         is_present = self.search_song_in_favourites(song_name)
-        if not is_present:
+        if is_present:
             return "Song Already Present in Favourites."
-        self.cur.execute("SELECT MAX(SONG_ID) FROM MYFAVOURITES")
+        self.cur.execute("SELECT max(SONG_ID) FROM MYFAVOURITES")
         last_song_id = self.cur.fetchone()[0]
         next_song_id = 1
         if last_song_id is not None:
             next_song_id = last_song_id + 1
-        self.cur.execute("INERT INTO MYFAVOURITES VALUES(:1,:2,:3)", (next_song_id, song_name, song_path))
+        self.cur.execute("insert into MYFAVOURITES VALUES(:1,:2,:3)", (next_song_id, song_name, song_path))
         self.conn.commit()
         return "Song Successfully Added to Your Favourites."
 
     def load_songs_from_favourites(self):
-        self.cur.execute("SELECT SONG_NAME,SONG_PATH FROM MYFAVOURITES")
-        is_song = True
+        self.cur.execute("select SONG_NAME,SONG_PATH from MYFAVOURITES")
+        is_song = False
         for song_name, song_path in self.cur:
             self.song_dict[song_name] = song_path
-            is_song = False
+            is_song = True
 
         if is_song:
             return "List Populated From Favourites."

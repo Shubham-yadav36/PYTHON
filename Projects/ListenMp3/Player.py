@@ -17,6 +17,9 @@ class Player:
         mixer.music.stop()
         self.my_model.close_db_connection()
 
+    def get_song_count(self):
+        return self.my_model.get_song_count()
+
     def set_volume(self, volume_level):
         mixer.music.set_volume(volume_level)
 
@@ -52,13 +55,13 @@ class Player:
     def unpause_song(self):
         mixer.music.unpause()
 
-    def add_song_to_favourites(self,song_name):
+    def add_song_to_favourites(self, song_name):
         song_path = self.my_model.get_song_path(song_name)
-        result = self.my_model.add_song_to_favourites(song_name, song_path)
+        result = self.my_model.add_song_in_favourites(song_name, song_path)
         return result
 
     def load_songs_from_favorites(self):
-        result = self.my_model.load_songs_from_favorites()
+        result = self.my_model.load_songs_from_favourites()
         return result, self.my_model.song_dict
 
     def remove_songs_from_favorites(self, song_name):

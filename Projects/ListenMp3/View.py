@@ -1,6 +1,8 @@
 import sys
 import tkinter as tk
 import tkinter.ttk as ttk
+import traceback
+
 import musicplayer_support
 import random
 import threading
@@ -146,7 +148,7 @@ class View:
         self.playList.configure(selectforeground="black")
         self.playList.configure(width=10)
 
-        self.previousButton = tk.Label(top)
+        self.previousButton = tk.Button(top)
         self.previousButton.place(relx=0.509, rely=0.285, height=16, width=16)
         self.previousButton.configure(background="#fff")
         self.previousButton.configure(borderwidth="0")
@@ -255,6 +257,8 @@ class View:
             self.my_player = Player.Player()
             if self.my_player.get_db_status():
                 messagebox.showinfo("Success!", "Connected Successfylly to the Database.")
+                self.addFavourite.config(command=self.add_song_to_favorites)
+                self.loadFavourite.config(command=self.load_song_from_favorites)
             else:
                 raise Exception("Sorry! You cannot save or load favorites.")
 
@@ -277,6 +281,7 @@ class View:
         img = tk.PhotoImage(file="./icons/music1.png")
         self.top.iconphoto(self.top, img)
         self.top.protocol("WM_DELETE_WINDOW", self.closewindow)
+        self.previousButton.config(command=self.load_previour_song)
         self.isPaused = False
         self.isPlaying = False
 
@@ -297,15 +302,15 @@ class View:
         green = green[2:]
         blue = blue[2:]
         if len(red) == 1:
-            red = '0'+red
+            red = '0' + red
 
         if len(green) == 1:
-            green = '0'+green
+            green = '0' + green
 
         if len(blue) == 1:
-            blue = '0'+blue
+            blue = '0' + blue
 
-        my_color= "#"+red+green+blue
+        my_color = "#" + red + green + blue
         self.playList.config(fg=my_color)
 
     def remove_song(self):
@@ -322,49 +327,116 @@ class View:
             messagebox.showerror("Error", ex1)
 
     def show_song_details(self):
-        self.song_length=self.my_player.get_song_length(self.song_name)
+        self.song_length = self.my_player.get_song_length(self.song_name)
         min, sec = divmod(self.song_length, 60)
         min = round(min)
         sec = round(sec)
-        self.songTotalDuration.config(text=str(min)+":"+str(sec))
+        self.songTotalDuration.config(text=str(min) + ":" + str(sec))
         self.songTimePassed.config(text="0:0")
         ext_index = self.song_name.rfind(".")
         str1 = self.song_name[0:ext_index]
-        if len(str1)>14:
-            str1 = str1[0:14]+"..."
+        if len(str1) > 14:
+            str1 = str1[0:14] + "..."
         self.songName.configure(text=str1)
 
     def play_song(self):
         self.sel_song_index_tuple = self.playList.curselection()
         try:
-            if len(self.sel_song_index_tuple)==0:
+            if len(self.sel_song_index_tuple) == 0:
                 raise NoSongSelectedError("Please Select The Song To Play.")
             self.song_name = self.playList.get(self.sel_song_index_tuple[0])
             self.show_song_details()
             self.my_player.play_song()
             self.change_volume(self.vol_scale.get())
-            self.isPlaying=True
+            self.isPlaying = True
         except NoSongSelectedError as ex1:
             messagebox.showerror("Error", ex1)
-
-
 
     def stop_song(self):
         self.my_player.stop_song()
         self.isPlaying = False
 
     def pause_song(self):
-        pass
+        if self.isPlaying:
+            if self.isPaused:
+                self.my_player.unpause_song()
+                self.isPaused = False
+            else:
+                self.my_player.pause_song()
+                self.isPaused = True
 
     def list_double_click(self, e):
         self.play_song()
 
     def closewindow(self):
-        result = messagebox.askyesno("App Closing !","Do You Want TO Close ListenMp3.")
+        result = messagebox.askyesno("App Closing !", "Do You Want TO Close ListenMp3.")
         if result:
             self.my_player.close_player()
             messagebox.showinfo("Have A Good Day", "Thank You For Using \"ListenMp3\"")
             self.top.destroy()
+
+    def load_previour_song(self):
+        try:
+            if hasattr(self, "sel_song_index_tuple") == False:
+                raise NoSongSelectedError("Please Select A Song.")
+            self.prev_song_index = self.sel_song_index_tuple[0] - 1
+            if self.prev_song_index == -1:
+                self.prev_song_index = self.my_player.get_song_count() - 1
+            self.playList.select_clear(0, tk.END)
+            self.playList.select_set(self.prev_song_index)
+            self.play_song()
+        except NoSongSelectedError as ex1:
+            messagebox.showerror("Error", ex1)
+
+    def add_song_to_favorites(self):
+        fav_song_index_tuple = self.playList.curselection()
+        try:
+            if len(fav_song_index_tuple) == 0:
+                raise NoSongSelectedError("Please Select A Song Before Adding To Favourites.")
+            song_name = self.playList.get(fav_song_index_tuple[0])
+            result = self.my_player.add_song_to_favourites(song_name)
+            messagebox.showinfo("Success !", result)
+        except NoSongSelectedError as ex1:
+            messagebox.showerror("Error", ex1)
+        except DatabaseError as ex2:
+            messagebox.showerror("DB Error", "Song Can Not Be Added.")
+            print(traceback.format_exc())
+
+    def load_song_from_favorites(self):
+        try:
+            load_result = self.my_player.load_songs_from_favorites()
+            print(load_result[1], load_result[0])
+            result = load_result[0]
+            if result.find("No Song Present") != -1:
+                messagebox.showinfo("Favourites Empty !.", "No Song Present In Your Favourites.")
+                return
+            self.playList.delete(0, tk.END)
+            song_dict = load_result[1]
+            for song_name in song_dict.keys():
+                self.playList.insert(tk.END, song_name)
+            rcolor = lambda: random.randint(0, 255)
+            red = hex(rcolor())
+            green = hex(rcolor())
+            blue = hex(rcolor())
+            red = red[2:]
+            green = green[2:]
+            blue = blue[2:]
+            if len(red) == 1:
+                red = '0' + red
+
+            if len(green) == 1:
+                green = '0' + green
+
+            if len(blue) == 1:
+                blue = '0' + blue
+
+            my_color = "#" + red + green + blue
+            self.playList.config(fg=my_color)
+            messagebox.showinfo("Favourites Loaded.", "Songs Loaded From Favourites.")
+
+        except DatabaseError as ex2:
+            messagebox.showerror("DB Error", "Song Can Not Be Loaded.")
+            print(traceback.format_exc())
 
 
 # The following code is added to facilitate the Scrolled widgets you specified.
